@@ -144,7 +144,7 @@ legend.onAdd = function() {
 
 
   // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function(data) {
+  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/PB2002_boundaries.shp.xml").then(function(data) {
     console.log(data);
     //pass tectonic plate data to geoJSON layer
     L.geoJson(data, {
@@ -153,7 +153,7 @@ legend.onAdd = function() {
 
     tectonicPlates.addTo(map);  
   });
-// Use d3.json to make a call to get our Major Earthquake geoJSON data.
+// // Use d3.json to make a call to get our Major Earthquake geoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
     
   function styleInfoMajor(feature) {
